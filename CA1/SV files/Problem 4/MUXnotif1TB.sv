@@ -1,0 +1,33 @@
+`timescale 1ns/1ns
+module MUXnotif1TB();
+logic aa,bb,cc,dd,s0,s1;
+wire ww;
+MUXnotif1 CUT(aa,bb,cc,dd,s0,s1,ww);
+initial begin
+#50 aa=1;bb=0;cc=0;dd=1;
+#50 s0=0;s1=0;
+#50 s0=1;
+#50 s1=0;
+#50 s1=1;
+#50 s0=1;
+#50 s1=0;
+#50 s0=0;
+#50 s0=1;
+#50 s1=1;
+#50 s0=0;
+#50 s1=0;
+#50 aa=0;bb=1;cc=0;dd=1;
+#50 s0=0;s1=0;
+#50 s0=1;
+#50 s1=0;
+#50 s1=1;
+#50 s0=1;
+#50 s1=0;
+#50 s0=0;
+#50 s0=1;
+#50 s1=1;
+#50 s0=0;
+#50 s1=0;
+#50 $stop;
+end
+endmodule
